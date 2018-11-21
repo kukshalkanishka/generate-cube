@@ -18,4 +18,8 @@ describe("generateHollowLine", function() {
     assert.equal(generateHollowLine("*", 1), "*");
     assert.equal(generateHollowLine("*", 4), "*  *");
   });
+
+  it("should return an empty string", function() {
+    assert.equal(generateHollowLine("*", 0), "");
+  });
 });

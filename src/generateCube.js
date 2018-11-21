@@ -4,8 +4,8 @@ const repeat = function(character, times) {
 
 const generateHollowLine = function(character, times) {
   let line = "";
-  let repeatTimes = times % (times -1);
-  repeatTimes = repeatTimes || 1;
+  let repeatTimes = times/times || 0;
+
   line = line + (repeat(character, repeatTimes));
 
   if(times > 1) {
