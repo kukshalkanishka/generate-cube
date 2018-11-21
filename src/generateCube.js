@@ -16,5 +16,21 @@ const generateHollowLine = function(character, times) {
   return line;
 }
 
+const generateSquare = function(character, side, type) {
+  let square = [];
+
+  for(let row = 0; row < side; row++){
+    let rowType = type[1];
+
+    if(row == 0 || row == side -1){
+      rowType = type[0];
+    }
+
+    square.push(rowType(character, side));
+  }
+  return square;
+}
+
 exports.repeat = repeat;
 exports.generateHollowLine = generateHollowLine;
+exports.generateSquare = generateSquare;
